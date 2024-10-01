@@ -5,8 +5,8 @@ This repo contains the necessary files to run the example code from 8.2.10.2 Doc
 To run this docker compose example, clone the repository:
 
 ```sh
-git clone https://github.com/CedricHermansBIT/docker_basics.git
-cd docker_basics
+git clone https://github.com/CedricHermansBIT/docker_compose_example.git
+cd docker_compose_example
 ```
 
 Next run the analysis using:
