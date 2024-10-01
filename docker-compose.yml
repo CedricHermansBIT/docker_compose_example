@@ -1,0 +1,18 @@
+services:
+  fastqc:
+    image: biocontainers/fastqc:v0.11.9_cv7
+    volumes:
+      - ./data:/data:Z
+    command: |
+      bash -c " # We wrap the command in bash -c to allow wildcard (*) expansion
+        fastqc /data/reads/*.fastq -o /data/fastqc_results
+      "
+  minimap2:
+    image: staphb/minimap2:2.28
+    volumes:
+      - ./data:/data:Z
+    command: |
+        minimap2 -ax sr -t 4
+        /data/reference/chromosome15.fasta
+        /data/reads/TESTX.fastq
+        -o /data/aligned.sam
