@@ -1,0 +1,1 @@
+This is just a file to make sure the fastqc_results folder is added to the GitHub as it is ignored if empty.
